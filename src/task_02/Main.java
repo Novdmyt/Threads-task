@@ -5,9 +5,9 @@ public class Main {
 
     public static void main(String[] arg) throws InterruptedException {
 
-        /* ??? **/ = new Fruits();
+        Fruits fruits = new Fruits();
         fruits.start();
-        fruits./* чекає, поки цей потік помре, і приєднує інший потік **/
+        fruits.join();
 
         showVeges(getVeges());
     }
@@ -16,7 +16,7 @@ public class Main {
         return new String[]{"tomato", "cucumber", "carrot"};
     }
 
-    private static void showVeges(/* ??? **/) {
+    private static void showVeges(String [ ] veges) {
         for (String veg : veges) System.out.println(veg);
     }
 }

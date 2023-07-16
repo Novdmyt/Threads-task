@@ -3,7 +3,7 @@ package task_02;
 class Fruits extends Thread {
 
     public void run() {
-        for (Integer fruit : getFruits()) {
+        for (String fruit : getFruits()) {
             System.out.println(fruit);
             try {
                 Thread.sleep(500);
@@ -13,7 +13,7 @@ class Fruits extends Thread {
         }
     }
 
-    private /* ??? **/ getFruits() {
+    private String[] getFruits() {
         return new String[] {"orange", "apple", "plum"};
     }
 }

@@ -7,19 +7,19 @@ public class Main {
     public static void main(String[] args) {
 
         name = "Robot 1.0";
-        getRobotInfo(/* ??? **/);
+        getRobotInfo(getRobot(name));
 
         name = "Robot 2.0";
-        getRobotInfo(/* ??? **/);
+        getRobotInfo(getRobot(name));
     }
 
-    private static /* ??? **/ getRobot(String name) {
+    private static Robot getRobot(String name) {
        return new Robot(name);
     }
 
     private static void getRobotInfo(Robot robot) {
-        System.out.println(robot/* отримати ім'я потоку **/ + " state: " + robot/* отримати стан потоку **/);
-        robot./* поток стартует **/
-        System.out.println(robot./* отримати ім'я потоку **/ + " state: " + robot./* отримати стан потоку **/
+        System.out.println(robot.getName() + " state: " + robot.getState());
+        robot.start();
+        System.out.println(robot.getName() + " state: " + robot.getState());
     }
 }

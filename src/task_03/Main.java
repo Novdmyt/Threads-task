@@ -9,21 +9,21 @@ public class Main {
         getBerries(group);
     }
 
-    private static void getFruits(ThreadGroup group) {
+    private static void getFruits(ThreadGroup group) throws InterruptedException {
         Fruits fruits = new Fruits(group, "\nFruits:");
         fruits.start();
-        fruits./* чекає, поки цей потік помре, і приєднує інший потік **/
+        fruits.join();
     }
 
     private static void getVeges(ThreadGroup group) throws InterruptedException {
         Veges veges = new Veges(group, "\nVeges:");
         veges.start();
-        veges./* чекає, поки цей потік помре, і приєднує інший потік **/
+        veges.join();
     }
 
-    private static /* ??? **/ getBerries(ThreadGroup group) throws InterruptedException {
+    private static void getBerries(ThreadGroup group) throws InterruptedException {
         Berries berries = new Berries(group, "\nBerries:");
         berries.start();
-        berries/* чекає, поки цей потік помре, і приєднує інший потік **/
+        berries.join();
     }
 }

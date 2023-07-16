@@ -6,12 +6,12 @@ public class Main {
 
         Fruits fruits = new Fruits();
         fruits.start();
-        fruits./* переривається цей потік **/
+        fruits.interrupt();
 
-        showVeges();
+        showVeges(getVeges());
     }
 
-    private static /* ??? **/ getVeges() {
+    private static String[] getVeges() {
         return new String[]{"tomato", "cucumber", "carrot"};
     }
 
